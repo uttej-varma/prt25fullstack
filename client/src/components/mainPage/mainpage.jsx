@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const MainPage=()=>{
   const [arr,setArr]=useState(new Array(data.length).fill(false));
   const [note,setNote]=useState([]);
-  const url=`http://localhost:3300/api/v1/usernote/note/${JSON.parse(localStorage.getItem("userData")).id}`
+  const url=`https://prt25fullstackuttej.onrender.com/api/v1/usernote/note/${JSON.parse(localStorage.getItem("userData")).id}`
   useEffect(()=>{
     axios.get(url).then((res)=>{
            if(res.data.message==="user notes fetched")

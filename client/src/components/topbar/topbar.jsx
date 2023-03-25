@@ -1,5 +1,6 @@
 import "./topbar.css";
 import { useNavigate } from "react-router-dom";
+import {useEffect} from "react"
 // import axios from "axios";
 const Topbar=()=>{
     const navigate=useNavigate();
@@ -11,6 +12,13 @@ const Topbar=()=>{
     const createNoteHandler=()=>{
          navigate("/create");
     }
+    useEffect(()=>{
+        if(localStorage.getItem("userData")===null)
+        {
+            navigate("/");
+        }
+    })
+    
     return(
         <>
         <div className="topBarContainer">

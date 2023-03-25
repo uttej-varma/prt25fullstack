@@ -11,7 +11,7 @@ const NoteInfo=(props)=>{
         props.setXrr([...props.xrr]);
     }
     const noteDeleteHandler=()=>{
-        const url=`http://localhost:3300/api/v1/usernote/note/${props.info._id}`
+        const url=`https://prt25fullstackuttej.onrender.com/api/v1/usernote/note/${props.info._id}`
          axios.delete(url).then((res)=>{
             navigate("/main");
          }).catch((e)=>{console.log(e)})

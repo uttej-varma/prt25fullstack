@@ -12,7 +12,7 @@ const CreateNote=()=>{
         e.preventDefault();
         if((data.title.length>=10 && data.title.length<=20) && (data.description.length>=30 && data.description.length<=100))
         {
-            axios.post("http://localhost:3300/api/v1/usernote/note",data,
+            axios.post("https://prt25fullstackuttej.onrender.com/api/v1/usernote/note",data,
             {
                 headers:{"jwttoken":JSON.parse(localStorage.getItem("userData")).token},
                 "Content-Type":"application/json"

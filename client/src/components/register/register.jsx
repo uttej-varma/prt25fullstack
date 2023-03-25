@@ -2,11 +2,13 @@ import { useNavigate } from "react-router-dom";
 import "./register.css";
 import {useState} from "react";
 import axios from "axios";
+
 const Register=()=>{
     const navigate=useNavigate();
     const gotoLoginPage=()=>{
         navigate("/");
     }
+   
     const [form,setForm]=useState({email:"",password:""});
     const [error,setError]=useState({email:{isValid:true,message:""},password:{isvalid:true,message:""}});
     const [tick,setTick]=useState(false);
@@ -66,7 +68,7 @@ const Register=()=>{
         e.preventDefault();
        if(form.email.length>0 && form.password.length>0 )
        {
-           axios.post("http://localhost:3300/api/v1/user/register",form).then((res)=>{
+           axios.post("https://prt25fullstackuttej.onrender.com/api/v1/user/register",form).then((res)=>{
             if(res.data.message==="User already registered"){
                 alert("user mail exist");
             }

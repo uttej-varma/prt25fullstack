@@ -1,8 +1,18 @@
 import "./login.css"
 import { useNavigate } from "react-router-dom";
 import {useState} from "react";
+import {useEffect} from "react";
 import axios from "axios";
 const Login=()=>{
+    useEffect(()=>{
+        if(localStorage.getItem("userData")!==null)
+        {
+            navigate("/main");
+        }
+        else if(localStorage.getItem("userData")===null){
+            navigate("/");
+        }
+    })
     const navigate=useNavigate();
     const [form,setForm]=useState({email:"",password:""});
     const gotoRegister=()=>{
@@ -12,7 +22,7 @@ const Login=()=>{
         e.preventDefault();
         if(form.email.length>0 && form.password.length>0 )
         {
-            axios.post("http://localhost:3300/api/v1/user/login",form).then((res)=>{
+            axios.post("https://prt25fullstackuttej.onrender.com/api/v1/user/login",form).then((res)=>{
              if(res.data.message==="user should register"){
                  alert("user not exist");
              }
@@ -23,7 +33,9 @@ const Login=()=>{
              else if(res.data.message==="user loggedin successfully"){
                 localStorage.removeItem("userData");
                 localStorage.setItem("userData",JSON.stringify(res.data));
-                    navigate("/main");
+                    
+                        navigate("/main");
+                    
              }
             })
         }
