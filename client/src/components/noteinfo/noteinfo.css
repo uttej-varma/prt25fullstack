@@ -1,0 +1,28 @@
+.noteinfobodycontainer{
+    margin-top: 60px;
+}
+.noteinfomaincontainer{
+    width:100vw;
+    height:100vh;
+    background-color: grey;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.noteinfobodycontainer>div{
+    border:1px solid;
+    background-color: white;
+    min-height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width:80%
+}
+.noteinfobodycontainer>div>button{
+    margin-left: 10px;
+    margin-top: 10px;
+    color:white;
+    background-color: blue;
+}
+.noteinfobodycontainer>div>button:hover{
+    cursor:pointer;
+}

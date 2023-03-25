@@ -1,0 +1,38 @@
+.registerpagemaincontainer{
+    border:1px solid;
+    background-color:pink;
+    padding-left:30px;
+    padding-right:30px;
+    width:400px;
+    margin-top: 150px;
+    margin-left: 450px;
+}
+.registerpagemaincontainer>div{
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.registerpagemaincontainer>div>h3{
+    color:grey;
+    text-align: center;
+}
+.registerpagemaincontainer>div>div{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.registerpagemaincontainer>div>div input{
+    margin-top: 10px;
+}
+.registerpagemaincontainer>div>div>button{
+    margin-top: 10px;
+    margin-left:30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+    background-color: pink;
+    border-radius: 6px;
+
+}
+.registerpagemaincontainer>div>div>button:hover{
+    cursor:pointer;
+}

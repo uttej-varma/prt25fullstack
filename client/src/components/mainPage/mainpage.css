@@ -1,0 +1,19 @@
+.mainpageBodyContainer{
+    margin-top: 50px;
+    height:calc(100vh - 50px);
+    overflow-y: scroll;
+}
+.mainpageFilter{
+    margin-left: 25%;
+    margin-right:25%;
+    
+}
+.mainpageFilter>input{
+    width:80%;
+}
+/* .mainPageoverflowcontainer{
+    overflow-y: scroll;
+} */
+.mainpageFilter>button:hover{
+    cursor:pointer;
+}

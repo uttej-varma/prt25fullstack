@@ -1,0 +1,12 @@
+.cardContainer{
+    border:1px solid;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: lightgray;
+    height:120px;
+}
+.cardContainer>div{
+    margin-left: 5px;
+    margin-top: 10px;
+}
