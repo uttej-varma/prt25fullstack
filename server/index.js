@@ -17,4 +17,9 @@ app.post("/api/v1/usernote/note",(req,res,next)=>{
     tokenVerification(req,res,next);
 });
 app.use("/api/v1/usernote",crudNote);
+app.get("/",(req,res)=>{
+    res.status(200).json({
+        msg:"welcome"
+    })
+})
 app.listen(3300,()=>{console.log("running at 3300")});
